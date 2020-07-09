@@ -7,21 +7,24 @@ class ModulesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GridView(
-      padding: const EdgeInsets.all(25),
-      children: MODULES
-          .map(
-            (moduleData) => ModuleItem(
-                  moduleData.id,
-                  moduleData.title,
-                ),
-          )
-          .toList(),
-      gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-        maxCrossAxisExtent: 200,
-        childAspectRatio: 3 / 2,
-        crossAxisSpacing: 20,
-        mainAxisSpacing: 20,
+    return Container(
+      color: Color(0xFF73AEF5),
+      child: GridView(
+        padding: const EdgeInsets.all(25),
+        children: MODULES
+            .map(
+              (moduleData) => ModuleItem(
+                moduleData.id,
+                moduleData.title,
+              ),
+            )
+            .toList(),
+        gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+          maxCrossAxisExtent: 200,
+          childAspectRatio: 3 / 2,
+          crossAxisSpacing: 20,
+          mainAxisSpacing: 20,
+        ),
       ),
     );
   }

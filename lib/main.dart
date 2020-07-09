@@ -1,3 +1,4 @@
+import 'package:dna_love/screens/program_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'screens/login_screen.dart';
@@ -19,12 +20,12 @@ class MyApp extends StatelessWidget {
       ],
       theme: ThemeData(
         primarySwatch: Colors.red,
-        // fontFamily: 'Gotham',
       ),
       initialRoute: '/',
       routes: {
         '/': (ctx) => LoginScreen(),
         ModulesScreen.routeName: (ctx) => ModulesScreen(),
+        ProgramScreeen.routeName: (ctx) => ProgramScreeen(),
       },
     );
   }

@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:dna_love/screens/program_screen.dart';
 import 'package:flutter/material.dart';
 
 class ModuleItem extends StatelessWidget {
@@ -12,10 +13,13 @@ class ModuleItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       child: InkWell(
-        onTap: () {},
+        onTap: () {
+          Navigator.of(context).pushReplacementNamed(ProgramScreeen.routeName);
+        },
         splashColor: Theme.of(context).primaryColor,
         borderRadius: BorderRadius.circular(15),
         child: Container(
+          color: Color.fromRGBO(230, 230, 230, 0.6),
           padding: const EdgeInsets.all(15),
           child: Text(
             title,
